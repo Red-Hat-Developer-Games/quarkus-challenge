@@ -79,7 +79,8 @@ INSERT INTO book(id, name, publicationYear) VALUES (6, 'The Silk Roads' , 2015);
 For prod mode, as this exercise is focused on creating the Quarkus Application, you will be provided all the resources needed to have a Postgres database running in the Openshift cluster. You will only need to configure the Quarkus Application to connect such Database.
 
 Now you should be ready to run the boostraped application. The dev mode is an awesome mode that Quarkus has that allows you to write code and get the result of your changes without having to restart the application at all.
-To start the application in `dev` mode use: ./mvnw compile quarkus:dev.
+To start the application in `dev` mode use: `./mvnw compile quarkus:dev`.
+
 This will also listen for a debugger on port 5005. If you want to wait for the debugger to attach before running you can pass `-Dsuspend` on the command line. If you don’t want the debugger at all you can use `-Ddebug=false`.
 
 Once started, you can request the provided endpoint: 
@@ -90,7 +91,7 @@ curl -w "\n" http://localhost:8080/hello
 Now you are set! Depending on the implementation that you have chosen, Hibernate ORM with Panache or Quarkus Spring extensions, add the corresponding dependencies to the `pom.xml` and start coding the Library Application!
 
 ## Packaging and run the application
-The application is packaged using `./mvnw package`. Check the information in the `README.md` file that will help you with some basics commands.
+The application is packaged using `./mvnw package`. Check the information in the `README.md` file that will help you with some basic commands.
 
 ## Containerization and deployment in OpenShift
 In the second part of the challenge, once the Quarkus Application is coded and is accepting requests locally, you should package it and deploy it to the provided the OpenShift Cluster. For that, I recommend using the [Quarkus OpenShift extension](https://quarkus.io/guides/deploying-to-openshift). This extension offers the ability to generate OpenShift resources. Once the resources have been generated, you can deploy them by running the command `oc apply -f path_to_file`
