@@ -5,7 +5,7 @@
 The main goal will be for you to create a Microservice to expose simple CRUD-like capabilities using Quarkus. The Quarkus Application you are coding should expose
 a REST API that allows operations on books stored in a Postgres database. If you have never used Quarkus before, check the participant guide or the `Useful links` section where you will find some learning resources.
 
-Whether you were able to attend the workshop before the Games or not, you can check the [workshop instructions](https://red-hat-developer-games.github.io/) and the code in the `solution` branch of the [GitHub repository](https://github.com/Red-Hat-Developer-Games/quarkus-workshop/tree/solution).
+Whether you were able to attend the workshop before the Games or not, you can check the [workshop instructions](https://red-hat-developer-games.github.io/) and the code in the `solution` branch of the [Workshop GitHub repository](https://github.com/Red-Hat-Developer-Games/quarkus-workshop/tree/solution).
 
 ## Prerequisites
 
@@ -30,11 +30,9 @@ CodeReady Workspaces is a collaborative Kubernetes-native development solution t
 
 #### CRW access
 
-* Choose an user. This user will be used to access the CRW and the OpenShift Web Console.
-
-* Launch the CRW creation by clicking the CodeReady Workspaces link (specific to your team) mentioned in the access data document.
-
-* Once the CRW creation done, access to your CRW and sign up with your own user (selected previously) and full fill the form:
+- Choose an user. This user will be used to access the CRW and the OpenShift Web Console.
+- Launch the CRW creation by clicking the CodeReady Workspaces link (specific to your team) mentioned in the access data email.
+- Once the CRW creation done, access to your CRW and sign up with your own user (selected previously) and full fill the form:
 
   user: USERNAME
   pwd: openshift
@@ -46,10 +44,54 @@ If everything goes well, you should have land to the Workspace creation page:
 
 ![workspace-from-template](CRW-workspace-from-template.png)
 
+You can now create your workspace either from a Git Repository, or using a template (the Quarkus template).
+Once created you should have a CodeReady Workspace ready to start to code: 
 
-image::crw-arrival.png[]
+![workspace-ready](CRW-workspace-ready.png)
 
-* Finally, open a terminal from the Terminal menu -> Open Terminal in specific container -> maven.
+Finally, open a terminal from the Terminal menu -> Open Terminal in specific container -> maven and make sure the following commands work on your CRW terminal
+
+```
+$ java -version
+$ mvn -version
+$ curl --version
+```
+
+### OpenShift Container Platform
+
+Your environment includes Red Hat's OpenShift Container Platform (OCP).
+
+Access to your OCP resources can be gained via both the `oc` CLI utility and the OCP web console (you should have received the URL by email)
+
+The project we are going to develop will contain 1 microservices accessing to a PostgreSQL database. 
+In the terminal of your CRW, authenticate into OpenShift as a non cluster admin user (USERNAME) using the `oc` utility.
+
+NOTE: You can get the command for authenticating from the OpenShift Web Console.
+
+```
+$ oc login
+```
+
+There are 2 namespaces (OpenShift projects) in your OpenShift cluster:
+The namespace for hosting your CRW environment is USERNAME-codeready where `USERNAME` correspond to your specific username.
+The namespace for hosting database and microservice is USERNAME-quarkus-challenge.
+
+NOTE: change the USERNAME with your own.
+
+Your environment comes pre-installed with an PostgreSQL database. You can verify the availability of database with the following command:
+
+```
+curl http://library-database.USERNAME-quarkus-challenge:5432
+```
+
+You should have the following response:
+
+```
+curl: (52) Empty reply from server
+```
+
+#Congratulations!#
+Your lab environment is now ready to use.
 
 Throughout this challenge we propose to use the following JPA Entity:
 
