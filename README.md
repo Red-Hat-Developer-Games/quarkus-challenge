@@ -4,15 +4,52 @@
 
 The main goal will be for you to create a Microservice to expose simple CRUD-like capabilities using Quarkus. The Quarkus Application you are coding should expose
 a REST API that allows operations on books stored in a Postgres database. If you have never used Quarkus before, check the participant guide or the `Useful links` section where you will find some learning resources.
+
 Whether you were able to attend the workshop before the Games or not, you can check the [workshop instructions](https://red-hat-developer-games.github.io/) and the code in the `solution` branch of the [GitHub repository](https://github.com/Red-Hat-Developer-Games/quarkus-workshop/tree/solution).
 
 ## Prerequisites
 
-To complete this challenge, you need:
-- an IDE, you have a Code Ready Workspace available if you want.
+First, make sure you have a Web browser installed on your laptop and internet connectivity. You will also need a GitHub account.
+
+You can complete this challenge using either your own local environment or the remote one that we are providing you.
+
+This workshop will make use of the following software and tools that you will need to install if you are using your own local environment:
+- an IDE
 - JDK 11+ installed with JAVA_HOME configured appropriately
 - Apache Maven 3.8.1+
+- Access to an OpenShift cluster (we will provide it)
+- The `oc` CLI utility (Optional. Only required for manually deploying)
 
+If you don't have the above tools and don't want to spend time installing them, you can also use the Code Ready Workspace that we will provide. 
+This remote development environment can be accessed via CodeReady Workspaces (CRW) through your local browser, you just need to sign up and configure some elements. Your environment includes also Red Hat’s OpenShift Container Platform (OCP).
+
+### CodeReady Workspaces
+
+CodeReady Workspaces is a collaborative Kubernetes-native development solution that delivers OpenShift workspaces and in-browser IDE for rapid cloud application development.
+
+
+#### CRW access
+
+* Choose an user. This user will be used to access the CRW and the OpenShift Web Console.
+
+* Launch the CRW creation by clicking the CodeReady Workspaces link (specific to your team) mentioned in the access data document.
+
+* Once the CRW creation done, access to your CRW and sign up with your own user (selected previously) and full fill the form:
+
+  user: USERNAME
+  pwd: openshift
+  email: USERNAME@ocp.com
+  first name: John
+  last name: Sanchez
+
+If everything goes well, you should have land to the Workspace creation page:
+
+![workspace-from-template](CRW-workspace-from-template.png)
+
+
+image::crw-arrival.png[]
+
+* Finally, open a terminal from the Terminal menu -> Open Terminal in specific container -> maven.
 
 Throughout this challenge we propose to use the following JPA Entity:
 
@@ -112,3 +149,10 @@ If you are not familiar with the OpenShift client, the `oc` command, pass the `q
 [Creating your first Quarkus application](https://quarkus.io/guides/getting-started)
 [Debugging and tools](https://quarkus.io/guides/tooling)
 [DevServices Demo](https://www.youtube.com/watch?v=yiFjAru09l8)
+
+
+## Need help?
+
+Remember that we are all here to answer any questions and support you during all the Developer Games:
+
+DevelopergamesEMEA@redhat.com
