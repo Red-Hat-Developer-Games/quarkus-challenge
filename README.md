@@ -90,8 +90,7 @@ You should have the following response:
 curl: (52) Empty reply from server
 ```
 
-#Congratulations!#
-Your lab environment is now ready to use.
+Congratulations! Your lab environment is now ready to use.
 
 Throughout this challenge we propose to use the following JPA Entity:
 
@@ -181,16 +180,26 @@ Now you are set! Depending on the implementation that you have chosen, Hibernate
 The application is packaged using `./mvnw package`. Check the information in the `README.md` file that will help you with some basic commands.
 
 ## Containerization and deployment in OpenShift
-In the second part of the challenge, once the Quarkus Application is coded and is accepting requests locally, you should package it and deploy it to the provided the OpenShift Cluster. For that, I recommend using the [Quarkus OpenShift extension](https://quarkus.io/guides/deploying-to-openshift). This extension offers the ability to generate OpenShift resources. Once the resources have been generated, you can deploy them by running the command `oc apply -f path_to_file`
+In the second part of the challenge, once the Quarkus Application is coded and is accepting requests locally (or in the CodeReady Workspaces environment) , you should package it and deploy it to the provided the OpenShift Cluster. 
+For that, I recommend using the [Quarkus OpenShift extension](https://quarkus.io/guides/deploying-to-openshift). This extension offers the ability to generate OpenShift resources. 
+Once the resources have been generated, during the `./mvnw package`, you can deploy them by running the command `oc apply -f path_to_file`.
+
 If you are not familiar with the OpenShift client, the `oc` command, pass the `quarkus.kubernetes.deploy` flag in the command line to build and deploy the application in a single step.
+
+Make sure that you are logged into the cluster and using the USERNAME-quarkus-challenge.
 
 ## Useful links
 
-[Quarkus Spring Extensions Guides](https://quarkus.io/guides/#compatibility)
-[Accessing a Database](https://quarkus.io/guides/hibernate-orm-panache)
-[Creating your first Quarkus application](https://quarkus.io/guides/getting-started)
-[Debugging and tools](https://quarkus.io/guides/tooling)
-[DevServices Demo](https://www.youtube.com/watch?v=yiFjAru09l8)
+- [Quarkus Spring Extensions Guides](https://quarkus.io/guides/#compatibility)
+
+- [Accessing a Database](https://quarkus.io/guides/hibernate-orm-panache)
+
+- [Creating your first Quarkus application](https://quarkus.io/guides/getting-started)
+
+- [Debugging and tools](https://quarkus.io/guides/tooling)
+
+- [DevServices Demo](https://www.youtube.com/watch?v=yiFjAru09l8)
+
 
 
 ## Need help?
