@@ -3,8 +3,16 @@
 ## Introduction
 
 The main goal will be for you to create a Microservice to expose simple CRUD-like capabilities using Quarkus. The Quarkus Application you are coding should expose
-a REST API that allows operations on books stored in a Postgres database. If you have never used Quarkus before, remember that you can attend the Quarkus workshop 
-before the Games. The only requirement is Java basic development knowledge.
+a REST API that allows operations on books stored in a Postgres database. If you have never used Quarkus before, check the participant guide or the `Useful links` section where you will find some learning resources.
+Whether you were able to attend the workshop before the Games or not, you can check the [workshop instructions](https://red-hat-developer-games.github.io/) and the code in the `solution` branch of the [GitHub repository](https://github.com/Red-Hat-Developer-Games/quarkus-workshop/tree/solution).
+
+## Prerequisites
+
+To complete this challenge, you need:
+- an IDE, you have a Code Ready Workspace available if you want.
+- JDK 11+ installed with JAVA_HOME configured appropriately
+- Apache Maven 3.8.1+
+
 
 Throughout this challenge we propose to use the following JPA Entity:
 
@@ -97,3 +105,10 @@ The application is packaged using `./mvnw package`. Check the information in the
 In the second part of the challenge, once the Quarkus Application is coded and is accepting requests locally, you should package it and deploy it to the provided the OpenShift Cluster. For that, I recommend using the [Quarkus OpenShift extension](https://quarkus.io/guides/deploying-to-openshift). This extension offers the ability to generate OpenShift resources. Once the resources have been generated, you can deploy them by running the command `oc apply -f path_to_file`
 If you are not familiar with the OpenShift client, the `oc` command, pass the `quarkus.kubernetes.deploy` flag in the command line to build and deploy the application in a single step.
 
+## Useful links
+
+[Quarkus Spring Extensions Guides](https://quarkus.io/guides/#compatibility)
+[Accessing a Database](https://quarkus.io/guides/hibernate-orm-panache)
+[Creating your first Quarkus application](https://quarkus.io/guides/getting-started)
+[Debugging and tools](https://quarkus.io/guides/tooling)
+[DevServices Demo](https://www.youtube.com/watch?v=yiFjAru09l8)
