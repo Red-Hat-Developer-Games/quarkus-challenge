@@ -44,7 +44,7 @@ If everything goes well, you should have land to the Workspace creation page:
 
 ![workspace-from-template](CRW-workspace-from-template.png)
 
-You can now create your workspace either from a Git Repository, or using a template (the Quarkus template).
+You can now create your workspace either using a template (the Quarkus template).
 Once created you should have a CodeReady Workspace ready to start to code: 
 
 ![workspace-ready](CRW-workspace-ready.png)
@@ -90,7 +90,7 @@ You should have the following response:
 curl: (52) Empty reply from server
 ```
 
-Congratulations! Your lab environment is now ready to use.
+Congratulations! Your environment is now ready to use.
 
 ## The Library Quarkus Application
 
