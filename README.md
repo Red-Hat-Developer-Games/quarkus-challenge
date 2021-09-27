@@ -155,11 +155,15 @@ When testing or running in dev mode you should use the postgres database provide
 The following SQL statements will help you to populate the database. To load them when Hibernate ORM starts, add an import.sql file to the root of your resources directory and add the relevant configuration properties in `application.properties`.
 ```sql
 INSERT INTO book(id, name, publicationYear) VALUES (1, 'Sapiens' , 2011);
-INSERT INTO book(id, name, publicationYear) VALUES (2, 'The Neverending Story' , 1979);
-INSERT INTO book(id, name, publicationYear) VALUES (3, 'Behind Closed Doors' , 2018);
-INSERT INTO book(id, name, publicationYear) VALUES (4, 'Eleanor Oliphant is Completely Fine' , 2018);
-INSERT INTO book(id, name, publicationYear) VALUES (5, 'Inferno' , 2013);
+INSERT INTO book(id, name, publicationYear) VALUES (2, 'Homo Deus' , 2015);
+INSERT INTO book(id, name, publicationYear) VALUES (3, 'Enlightenment Now' , 2018);
+INSERT INTO book(id, name, publicationYear) VALUES (4, 'Factfulness' , 2018);
+INSERT INTO book(id, name, publicationYear) VALUES (5, 'Sleepwalkers' , 2012);
 INSERT INTO book(id, name, publicationYear) VALUES (6, 'The Silk Roads' , 2015);
+INSERT INTO book(id, name, publicationYear) VALUES (7, 'The culture map' , 2016);
+INSERT INTO book(id, name, publicationYear) VALUES (8, 'Billy Summers' , 2021);
+INSERT INTO book(id, name, publicationYear) VALUES (9, 'The Handmaids Tale' , 2016);
+INSERT INTO book(id, name, publicationYear) VALUES (10, 'The Institue' , 2019);
 ```
 
 For prod mode, as this exercise is focused on creating the Quarkus Application, you will be provided all the resources needed to have a Postgres database running in the Openshift cluster. You will only need to configure the Quarkus Application to connect such Database.
