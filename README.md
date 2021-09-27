@@ -92,6 +92,8 @@ curl: (52) Empty reply from server
 
 Congratulations! Your lab environment is now ready to use.
 
+## The Library Quarkus Application
+
 Throughout this challenge we propose to use the following JPA Entity:
 
 ```java
