@@ -206,6 +206,8 @@ Make sure that you are logged into the cluster and using the USERNAME-quarkus-ch
 
 - [DevServices Demo](https://www.youtube.com/watch?v=yiFjAru09l8)
 
+## Deliverables:
+In order to verify that the challenge has been completed, we expect a file containing the url to access the microservice on OpenShift and the url to the GitHub repository containing the code. (.txt doc with 2 urls).
 
 
 ## Need help?
