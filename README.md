@@ -181,7 +181,7 @@ curl -w "\n" http://localhost:8080/hello
 Now you are set! Depending on the implementation that you have chosen, Hibernate ORM with Panache or Quarkus Spring extensions, add the corresponding dependencies to the `pom.xml` and start coding the Library Application!
 
 ## Packaging and run the application
-The application is packaged using `./mvnw package`. Check the information in the `README.md` file that will help you with some basic commands.
+The application is packaged using `./mvnw package`. If you used the suggested command in the `Bootstrapping the project` section, you should have a `README.md` file that will help you with some basic commands.
 
 ## Containerization and deployment in OpenShift
 In the second part of the challenge, once the Quarkus Application is coded and is accepting requests locally (or in the CodeReady Workspaces environment) , you should package it and deploy it to the provided the OpenShift Cluster. 
